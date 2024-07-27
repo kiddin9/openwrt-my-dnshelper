@@ -1,5 +1,12 @@
 #!/bin/sh
 
+uci -q batch <<-EOF >/dev/null 2>&1
+	delete ucitrack.@my-dnshelper[-1]
+	add ucitrack my-dnshelper
+	set ucitrack.@my-dnshelper[-1].init=my-dnshelper
+	commit ucitrack
+EOF
+
 if [ -f /usr/bin/my-dnshelper ];then
 chmod 0774 /usr/bin/my-dnshelper  >/dev/null 2>&1
 else
