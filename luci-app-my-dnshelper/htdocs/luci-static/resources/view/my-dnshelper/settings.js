@@ -162,20 +162,11 @@ return view.extend({
 		o.rmempty = false;
 		o.default = 'false';
 
-		o = s.option(form.Flag, "block_google", _("Block Google Website and API"));
-		o.description = _("Leave the network for a period of time");
-		o.rmempty = false;
-		o.default = 'false';
-
 		o = s.option(form.Flag, "my_github", _("Easy to Visit GitHub Website"));
 		o.rmempty = false;
 		o.default = 'false';
 
 		o = s.option(form.Flag, "autoupdate", _("Enable automatic update rules"));
-		o.rmempty = false;
-		o.default = 'true';
-
-		o = s.option(form.Flag, "app_test", _("Check After Update"));
 		o.rmempty = false;
 		o.default = 'true';
 
